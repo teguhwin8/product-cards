@@ -7,7 +7,7 @@ import { Product } from "@/types/Product";
 import { ShoppingBag } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -97,4 +97,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

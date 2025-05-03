@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ShoppingCart, Heart } from "lucide-react";
 import { Product } from "@/types/Product";
+import Image from "next/image";
 
 interface ProductCardProps {
   product: Product;
@@ -29,10 +30,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
   return (
     <div className="max-w-xs w-full bg-white rounded-3xl overflow-hidden shadow-lg transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02]">
       <div className="relative">
-        <img
+        <Image
           src={imageUrl}
           alt={product.title}
           className="w-full object-cover rounded-t-3xl aspect-square"
+          width={300}
+          height={300}
         />
         <button
           onClick={toggleWishlist}
